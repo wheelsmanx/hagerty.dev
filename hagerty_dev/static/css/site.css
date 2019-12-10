@@ -4,13 +4,53 @@ width:100%;
 position:absolute; 
 top:0%;
 left:0%; 
-background-color:black; 
+background-color: #000000; 
 }
+
 #bottom_banner{
 height:5%; 
 width:100%; 
 position:absolute;
 top:95%; 
 left:0%;  
-background-color:black; 
+background-color: #000000; 
+}
+
+#top_banner_inner {
+height:6%; 
+width:100%; 
+position:absolute; 
+opacity:75%;
+top:0%;
+left:0%; 
+background-color: #5B5B5B; 
+}
+
+#bottom_banner_inner{
+height:6%; 
+width:100%; 
+position:absolute;
+opacity:75%;
+top:94%; 
+left:0%;  
+background-color: #5B5B5B; 
+}
+
+#content{
+font-family: 'Armata', sans-serif;
+position:absolute; 
+top:5%;
+left:0%; 
+height:95%; 
+width:100%;
+background-color: #BDBDBD;
+}
+
+#url_title{
+font-family: 'Armata', sans-serif;
+line-height: 5%;
+position:fixed; 
+right:5%; 
+top:2.5%; 
+height:4%;
 }

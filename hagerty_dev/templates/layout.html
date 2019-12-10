@@ -5,14 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hagerty.dev</title>
     <link rel="stylesheet" type="text/css" href="../static/css/site.css" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+	<!-- some dumb notes: 
+	font-family: 'Dosis', sans-serif;
+	-->
+	<link href="https://fonts.googleapis.com/css?family=Armata|Righteous&display=swap" rel="stylesheet">
+	<!-- some dumb notes: 
+	font-family: 'Righteous', cursive;
+	font-family: 'Armata', sans-serif;
+	-->
 </head>
 
 <body>
-<div id=top_banner>
-</div>
+	<div id=top_banner_inner>
+		<div id=top_banner>
+		</div>
+			<div id=url_title>
+			Hagerty.dev
+			</div>
+	</div>
+<div id=content>
 {% block content %}{% endblock %}
-<div id=bottom_banner>
 </div>
+	<div id=bottom_banner_inner>
+		<div id=bottom_banner>
+
+		</div>
+	</div>
 
 </body>
 </html>
