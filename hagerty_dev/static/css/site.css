@@ -1,88 +1,24 @@
-#top_banner {
-height:35px; 
-width:100%; 
-position:fixed; 
-top:0%;
-left:0%; 
-background-color: #000000; 
+#my_colorScheme{
+background-color:#5f5f5f!important;
 }
 
-#bottom_banner{
-height:35px; 
-width:100%; 
-position:fixed;
-top:95%; 
-left:0%;  
-background-color: #000000; 
-}
-
-#top_banner_inner {
-height:30px; 
-width:100%; 
-position:absolute; 
-opacity:75%;
-top:0%;
-left:0%; 
-background-color: #5B5B5B; 
-}
-
-#bottom_banner_inner{
-height:30px; 
-width:100%; 
-position:absolute;
-opacity:75%;
-top:94%; 
-left:0%;  
-background-color: #5B5B5B; 
-}
-
-#content{
+#my_font_white {
 font-family: 'Armata', sans-serif;
-position:absolute; 
-top:35px;
-left:0%; 
-height:95%; 
-width:100%;
-background-color: #BDBDBD;
+color:white;
 }
-
-#url_title{
+#my_font_black {
 font-family: 'Armata', sans-serif;
-line-height: 30px;
-position:fixed; 
-right:2%; 
-top:0%; 
-height:30px;
+color:black;
 }
 
-#menu ul {
-  list-style-type: none;
-  top:5%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #5B5B5B;
-}
-
-#menu li {
-  float: left;
-}
-
-#menu li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size:90%;
-}
-
-#menu {
+#my_button_hover:hover {
 font-family: 'Armata', sans-serif;
-line-height: 5%;
-position:absolute; 
-left:1.5%; 
-top:0%; 
-height:4%;
+color:black;
+background-color: #a6a6a6!important;
+}
+#my_button_hover {
+font-family: 'Armata', sans-serif;
+color:black;
+border-color:black;
 }
 
