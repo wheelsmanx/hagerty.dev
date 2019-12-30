@@ -15,37 +15,37 @@ import os
 import traceback
 import re
 
+import slackBotActions
+
 app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase"
 
 # Module: notABot.py
-
-
-
-
 
 slack_events_adapter = SlackEventAdapter("", "/bots/notabot", app)
 slack_client = slack.WebClient(token="")
     
 @slack_events_adapter.on("member_joined_channel")
 def handle_message(event_data):
-    message = event_data["event"]
-    # If the incoming message contains "hi", then respond with a "Hello" message
-    channel = message["channel"]
-    message = "Hello and welcome <@%s>! :tada:" % message["user"]
-    slack_client.chat_postMessage(channel=channel, text=message)
+    tempMessage = slackBotActions.slackParse(event_data)
+    if(tempMessage['unit'] == True):
+        slack_client.chat_postMessage(channel=tempMessage['channel'], text=tempMessage['text'])
 
-# Example reaction emoji echo
 @slack_events_adapter.on("reaction_added")
 def reaction_added(event_data):
-    message = event_data["event"]
-    emoji = message["reaction"]
-    channel = message["item"]["channel"]
-    message = "Hello loser <@%s>! :tada:" % message["user"]
-    slack_client.chat_postMessage(channel=channel, text=message)
+    tempMessage = slackBotActions.slackParse(event_data)
+    if(tempMessage['unit'] == True):
+        slack_client.chat_postMessage(channel=tempMessage['channel'], text=tempMessage['text'], thread_ts=tempMessage['thread_ts'])
 
+@slack_events_adapter.on("message")
+def reaction_added(event_data):
+    tempMessage = slackBotActions.slackParse(event_data)
+    if(tempMessage['unit'] == True):
+        slack_client.chat_postMessage(channel=tempMessage['channel'], text=tempMessage['text'], thread_ts=tempMessage['thread_ts'])
+
+                                  
 # Error events
 @slack_events_adapter.on("error")
-def error_handler(err):
+def slack_error_handler(err):
     print("ERROR: " + str(err))
 
 
